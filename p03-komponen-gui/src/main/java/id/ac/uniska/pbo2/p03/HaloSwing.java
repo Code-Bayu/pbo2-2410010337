@@ -7,9 +7,9 @@ package id.ac.uniska.pbo2.p03;
 import com.formdev.flatlaf.FlatLightLaf;
 
 /**
- *
- * @author Lenovo
- */
+* JFrame Form paling sederhana: satu jendela berisi satu label.
+* Label disusun di tab Design, sehingga kode di dalam initComponents() dibuat oleh NetBeans.
+*/
 public class HaloSwing extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(HaloSwing.class.getName());
