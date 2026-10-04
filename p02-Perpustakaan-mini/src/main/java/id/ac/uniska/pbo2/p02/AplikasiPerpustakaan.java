@@ -4,6 +4,7 @@
  */
 package id.ac.uniska.pbo2.p02;
 
+import java.util.List;
 /**
 * Menjalankan skenario peminjaman dan pengembalian pada Perpustakaan Mini.
 */
@@ -30,6 +31,12 @@ public class AplikasiPerpustakaan {
         cetakKembali(perpus, "M001", 3);
         
         System.out.println();
+        cetakPencarian(perpus, "code");
+        
+        System.out.println();
+        cetakPinjam(perpus, "S001", siti);
+        
+        System.out.println();
         System.out.println("Koleksi tersedia: " + perpus.jumlahTersedia() +  " dari " + perpus.getDaftarKoleksi().size());
     }
     
@@ -48,6 +55,14 @@ public class AplikasiPerpustakaan {
     private static void cetakKembali(Perpustakaan perpus, String kode, int hariTerlambat) {
         long denda = perpus.kembalikan(kode, hariTerlambat);
         System.out.println("Pengembalian " + kode + " terlambat " + hariTerlambat + " hari, denda Rp" + denda);
+    }
+    
+    private static void cetakPencarian(Perpustakaan perpus, String kataKunci) {
+        List<Koleksi> hasil = perpus.cariJudul(kataKunci);
+        System.out.println("Hasil pencarian \"" + kataKunci + "\": " + hasil.size() + " koleksi");
+        for (Koleksi k : hasil) {
+            System.out.println(k);
+        }
     }
 }
 
