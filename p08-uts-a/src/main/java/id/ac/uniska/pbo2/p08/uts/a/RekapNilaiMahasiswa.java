@@ -28,18 +28,60 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        formPanel = new javax.swing.JPanel();
+        labelPanel = new javax.swing.JPanel();
+        npmLabel = new javax.swing.JLabel();
+        namaLabel = new javax.swing.JLabel();
+        nilaiTugasLabel = new javax.swing.JLabel();
+        nilaiUtsLabel = new javax.swing.JLabel();
+        NilaiUasLabel = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        isianPanel = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        formPanel.setLayout(new java.awt.BorderLayout());
+
+        labelPanel.setLayout(new java.awt.GridLayout(0, 1, 0, 2));
+
+        npmLabel.setText("NPM");
+        labelPanel.add(npmLabel);
+
+        namaLabel.setText("Nama");
+        labelPanel.add(namaLabel);
+
+        nilaiTugasLabel.setText("Nilai Tugas");
+        labelPanel.add(nilaiTugasLabel);
+
+        nilaiUtsLabel.setText("Nilai UTS");
+        labelPanel.add(nilaiUtsLabel);
+
+        NilaiUasLabel.setText("Nilai UAS");
+        labelPanel.add(NilaiUasLabel);
+
+        jButton1.setText("jButton1");
+        labelPanel.add(jButton1);
+
+        jButton2.setText("jButton2");
+        labelPanel.add(jButton2);
+
+        formPanel.add(labelPanel, java.awt.BorderLayout.WEST);
+
+        javax.swing.GroupLayout isianPanelLayout = new javax.swing.GroupLayout(isianPanel);
+        isianPanel.setLayout(isianPanelLayout);
+        isianPanelLayout.setHorizontalGroup(
+            isianPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 507, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        isianPanelLayout.setVerticalGroup(
+            isianPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 308, Short.MAX_VALUE)
         );
+
+        formPanel.add(isianPanel, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(formPanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -70,5 +112,15 @@ public class RekapNilaiMahasiswa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel NilaiUasLabel;
+    private javax.swing.JPanel formPanel;
+    private javax.swing.JPanel isianPanel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JPanel labelPanel;
+    private javax.swing.JLabel namaLabel;
+    private javax.swing.JLabel nilaiTugasLabel;
+    private javax.swing.JLabel nilaiUtsLabel;
+    private javax.swing.JLabel npmLabel;
     // End of variables declaration//GEN-END:variables
 }
